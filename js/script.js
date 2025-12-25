@@ -1,11 +1,54 @@
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.querySelector(".nav-links");
+// Set active navigation link
+document.addEventListener('DOMContentLoaded', () => {
+  const currentPage = window.location.pathname.split('/').pop() || 'home.html';
+  const navLinks = document.querySelectorAll('.nav-links a');
+  
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
 
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+  // Hero button click
+  const ctaBtn = document.getElementById('cta-btn');
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', () => {
+      window.location.href = 'characters.html';
+    });
+  }
+
+  // Contact form submission
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      
+      alert(`Thanks ${name}! Your message has been sent. We'll contact you at ${email}.`);
+      contactForm.reset();
+    });
+  }
 });
 
-document.getElementById("contact-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Message sent to Hawkins Lab!");
-});
+// Form validation
+function validateForm(form) {
+  const inputs = form.querySelectorAll('input[required]');
+  let isValid = true;
+  
+  inputs.forEach(input => {
+    if (!input.value.trim()) {
+      input.style.borderColor = '#e50914';
+      isValid = false;
+    } else {
+      input.style.borderColor = '#333';
+    }
+  });
+  
+  return isValid;
+}
+
+
+
+
