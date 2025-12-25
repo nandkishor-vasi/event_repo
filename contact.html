@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hawkins Lab - Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Benguiat&family=Creepster&family=ITC+Benguiat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <h1 class="logo">HAWKINS<span class="lab">LAB</span></h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="characters.html">Characters</a></li>
+        <li><a href="episodes.html">Episodes</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero contact-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2 class="glitch" data-text="REPORT AN INCIDENT">REPORT AN INCIDENT</h2>
+      <p>Have you witnessed something strange?</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2 class="section-title">CONTACT HAWKINS LAB</h2>
+          <p class="contact-intro">If you've experienced any unusual phenomena, witnessed strange occurrences, or have information regarding the incidents in Hawkins, please report immediately.</p>
+          
+          <div class="info-boxes">
+            <div class="info-box">
+              <div class="info-icon">📞</div>
+              <h4>Emergency Hotline</h4>
+              <p>1-800-HAWKINS</p>
+              <span class="info-detail">Available 24/7</span>
+            </div>
+            
+            <div class="info-box">
+              <div class="info-icon">📍</div>
+              <h4>Laboratory Location</h4>
+              <p>Hawkins National Laboratory</p>
+              <span class="info-detail">Hawkins, Indiana</span>
+            </div>
+            
+            <div class="info-box">
+              <div class="info-icon">⚠️</div>
+              <h4>Security Level</h4>
+              <p>Clearance Required</p>
+              <span class="info-detail">Level 4 Access Only</span>
+            </div>
+          </div>
+
+          <div class="warning-box">
+            <h4>⚠️ CLASSIFIED WARNING ⚠️</h4>
+            <p>All communications are monitored and recorded. Any unauthorized disclosure of classified information will be prosecuted to the fullest extent of the law. Do not approach any unidentified entities or enter restricted areas.</p>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <form id="contact-form" class="contact-form">
+            <div class="form-header">
+              <h3>INCIDENT REPORT FORM</h3>
+              <p>All fields are required</p>
+            </div>
+
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required />
+            </div>
+
+            <div class="form-group">
+              <label for="incident-type">Incident Type</label>
+              <select id="incident-type" name="incident-type" required>
+                <option value="">Select incident type...</option>
+                <option value="sighting">Strange Creature Sighting</option>
+                <option value="lights">Unusual Light Phenomena</option>
+                <option value="sounds">Unexplained Sounds</option>
+                <option value="disappearance">Missing Person</option>
+                <option value="powers">Supernatural Abilities</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="location">Incident Location</label>
+              <input type="text" id="location" name="location" placeholder="Where did this occur?" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Detailed Description</label>
+              <textarea id="message" name="message" rows="6" placeholder="Provide as much detail as possible about what you witnessed..." required></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="clearance" name="clearance" required />
+              <label for="clearance">I understand this information is classified and agree to maintain confidentiality</label>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>SUBMIT REPORT</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 HAWKINS DEBUG LAB | All Rights Reserved</p>
+      <p class="footer-warning">⚠️ CLASSIFIED INFORMATION - LEVEL 4 CLEARANCE REQUIRED ⚠️</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
