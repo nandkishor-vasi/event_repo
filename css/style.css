@@ -103,3 +103,8 @@ footer {background: #111; text-align: center; padding: 30px 20px; border-top: 2p
   .character-grid, .contact-grid {grid-template-columns: 1fr;}
 }
 
+
+.hidden {
+  display: none;
+}
+
