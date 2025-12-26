@@ -23,8 +23,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #333;
-      /* BUG 1: Navigation will disappear when scrolling */
+      border-bottom: 1px solid #333
       position: relative; 
       top: 0;
       z-index: 100;
@@ -50,7 +49,6 @@
 
     .hero {
       height: 80vh;
-      /* BUG 2: The background image won't show because of a syntax error in the URL/linear-gradient */
       background-image: linear-gradient(rgba(0,0,0,0.6) rgba(0,0,0,0.6)), url("images/joker.jpg");
       background-size: cover;
       background-position: center;
@@ -70,7 +68,6 @@
       text-shadow: 2px 2px 10px black;
     }
 
-    /* BUG 3: Hero text is invisible because color matches background */
     .hero p {
       margin-bottom: 20px;
       font-size: 1.2rem;
@@ -102,7 +99,6 @@
       display: flex;
       gap: 20px;
       justify-content: center;
-      /* BUG 4: Cards will go off-screen on mobile instead of wrapping */
       flex-wrap: nowrap; 
     }
 
@@ -241,8 +237,8 @@
   </footer>
 
   <script>
-    // Hint: BUG 6 is caused by a missing function definition here!
   </script>
 
 </body>
+
 </html>
