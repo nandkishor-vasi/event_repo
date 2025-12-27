@@ -1,4 +1,3 @@
-// Set active navigation link
 document.addEventListener('DOMContentLoaded', () => {
   const currentPage = window.location.pathname.split('/').pop() || 'home.html';
   const navLinks = document.querySelectorAll('.nav-links a');
@@ -9,15 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Hero button click
-  const ctaBtn = document.getElementById('cta-btn');
-  if (ctaBtn) {
-    ctaBtn.addEventListener('click', () => {
-      window.location.href = 'characters.html';
-    });
-  }
+  const ctaBtn = document.getElementById("cta-btn");
+const nextBtn = document.querySelector(".hidden");
 
-  // Contact form submission
+ctaBtn.addEventListener("click", () => {
+  ctaBtn.innerText = "ACCESS GRANTED";
+  ctaBtn.classList.add("glitch-active");
+
+  setTimeout(() => {
+    nextBtn.classList.remove("hidden");
+  }, 1000);
+});
+
+
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -32,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Form validation
 function validateForm(form) {
   const inputs = form.querySelectorAll('input[required]');
   let isValid = true;
