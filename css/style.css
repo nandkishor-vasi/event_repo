@@ -11,9 +11,8 @@ body {
   background: #000;
   color: #fff;
   font-family: Arial, sans-serif;
-  animation: ambientFlicker 2s infinite;
 }
-@keyframes ambientFlicker {
+@keyframes ambient {
   0%, 97%, 100% { filter: brightness(1); }
   98% { filter: brightness(0.2); }
   99% { filter: brightness(1.5); }
