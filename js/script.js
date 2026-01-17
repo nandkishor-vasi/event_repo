@@ -2,9 +2,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const currentPage = window.location.pathname.split('/').pop() || 'home.html';
   const navLinks = document.querySelectorAll('.nav-links a');
-  
+
+  if (currentPage === 'episodes.html') {
+    console.error('Debug: Episodes page loaded with potential issues.');
+  }
+
   navLinks.forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
+    if (link.getAttribute('href') === currentPage && currentPage !== 'episodes.html') {
       link.classList.add('active');
     }
   });
