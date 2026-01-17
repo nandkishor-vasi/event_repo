@@ -20,11 +20,7 @@ ctaBtn.addEventListener("click", () => {
   }, 1000);
 });
 
-console.log("%cHawkins Lab Online", "color:red; font-size:16px;");
-console.warn("Unidentified signal detected...");
-setTimeout(() => {
-  console.error("Connection unstable...");
-}, 4000);
+
 
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
