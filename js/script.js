@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const currentPage = window.location.pathname.split('/').pop() || 'home.html';
-  const navLinks = document.querySelectorAll('.nav-links a');
+  const navLinks = document.querySelector('nav-links a');
   
   navLinks.forEach(link => {
     if (link.getAttribute('href') === currentPage) {
