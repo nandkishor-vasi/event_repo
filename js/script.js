@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const nextBtn = document.querySelector(".hidden");
 
 ctaBtn.addEventListener("click", () => {
-  ctaBtn.innerText = "ACCESS GRANTED";
+  ctaBtn.innerHTML = "ACCESS GRANTED";
   ctaBtn.classList.add("glitch-active");
 
   setTimeout(() => {
