@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hawkins Lab | Restricted Access</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    .navbar {
+      background-color: #000;
+      padding: 15px 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+      position: relative; 
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      color: red;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: red;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      height: 80vh;
+      background-image: linear-gradient(rgba(0,0,0,0.6) rgba(0,0,0,0.6)), url("images/joker.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h2 {
+      margin-bottom: 10px;
+      font-size: 3rem;
+      color: red;
+      text-shadow: 2px 2px 10px black;
+    }
+
+    .hero p {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      color: black; 
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      background-color: red;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: red;
+      text-transform: uppercase;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: nowrap; 
+    }
+
+    .card {
+      background-color: #111;
+      width: 280px;
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #222;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      filter: grayscale(50%);
+    }
+
+    .episode-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .episode {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      border-top: 3px solid red;
+    }
+
+    #contact-form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    #contact-form input,
+    #contact-form button,
+    #contact-form textarea {
+      padding: 12px;
+      background: #111;
+      border: 1px solid #333;
+      color: white;
+    }
+
+    #contact-form button {
+      background-color: red;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 15px;
+      border-top: 1px solid #222;
+      color: #666;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <h1 class="logo">Secret Lab</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#experiment">Subjects</a></li>
+        <li><a href="#equipment-list">Inventory</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>HAWKINS NATIONAL LABORATORY</h2>
+    <p>Classified Research Facility | Restricted Personnel Only</p>
+    <button onclick="viewSubjects()">View Subject Files</button>
+  </section>
+
+  <section id="experiments">
+    <h2>Active Subject Files</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="images/demogorgan.jpg" alt="Eleven">
+        <h3>Subject 011</h3>
+        <p>Capabilities: Psychokinesis. Status: Missing.</p>
+      </div>
+      <div class="card">
+        <img src="images/demogorgan.jpg" alt="Demogorgon">
+        <h3>Specimen ID: 001</h3>
+        <p>Origin: The Upside Down. Highly aggressive predator.</p>
+      </div>
+      <div class="card">
+        <img src="images/The Gate.jpg" alt="The Gate">
+        <h3>The Gate</h3>
+        <p>Inter-dimensional rift located in basement level 4.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipment">
+    <h2>Lab Equipment</h2>
+    <div class="episode-grid">
+      <div class="episode">
+        <h3>Sensory Tank</h3>
+        <p>Psychic amplification chamber.</p>
+      </div>
+      <div class="episode">
+        <h3>Cerebro</h3>
+        <p>Ultra-long range radio array.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Report an Anomaly</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Agent Name" required />
+      <input type="email" placeholder="Secure Email" required />
+      <textarea placeholder="Describe the sighting..." rows="4"></textarea>
+      <button>Send Encrypted Data</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 1984 Hidden Laboratory | United States Department of Energy</p>
+  </footer>
+
+  <script>
+  </script>
+
+</body>
+
+</html>

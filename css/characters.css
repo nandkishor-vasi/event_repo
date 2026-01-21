@@ -11,6 +11,7 @@ body {
   background: #000;
   color: #fff;
   font-family: Arial, sans-serif;
+  animation: ambient 2s infinite;
 }
 @keyframes ambient {
   0%, 97%, 100% { filter: brightness(1); }
@@ -18,7 +19,6 @@ body {
   99% { filter: brightness(1.5); }
 }
 
-/* Navigation */
 .navbar {
   background: #111;
   padding: 20px;
@@ -84,8 +84,8 @@ body {
   animation: textDisturb 3s infinite;
 }
 @keyframes textDisturb {
-  0%, 100% { letter-spacing: 2000px; }
-  50% { letter-spacing: 4000px; }
+  0%, 100% { letter-spacing: 2px; }
+  50% { letter-spacing: 4px; }
 }
 
 .hero-content p {
@@ -134,7 +134,6 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  
 }
 .about-card {
   background: #111;
@@ -149,16 +148,11 @@ section {
 .card-icon {
   font-size: 3rem;
   margin-bottom: 10px;
-  text-shadow: 1px 1px  blue, 21px 21px 0 ;
 }
-.about-grid{
-  grid-template-columns: 1fr 1fr;
-}
+
 /* Featured Content */
 .featured-grid {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
   margin-top: 40px;
@@ -211,10 +205,9 @@ section {
 }
 
 
-/* Characters */
 .character-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+   grid-template-columns: repeat(3, 55.3333%);
   gap: 30px;
 }
 .character-card {
@@ -488,7 +481,6 @@ footer {
   color: #e50914;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
    .navbar {
     flex-direction: column;
@@ -505,6 +497,7 @@ footer {
   .hero,
   .page-hero {
     height: auto;
+    
     padding: 80px 20px;
   }
 
@@ -518,9 +511,6 @@ footer {
   }
   .featured-item img {
     height: 180px;
-  }
-  .character-grid {
-    grid-template-columns: 1fr;
   }
 
   .character-image {
